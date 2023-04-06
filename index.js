@@ -44,7 +44,7 @@ async function run(){
       res.send(cursor)
     })
 
-
+    // update details 
     app.patch('/student/:id', async(req,res)=>{
       const id = req.params.id;
       const doc = req.body;
