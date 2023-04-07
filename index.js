@@ -10,7 +10,7 @@ app.use(express.json());
 
 // mongouri 
 const uri = `mongodb+srv://nodeUser:LJkdpYR0HNRgODT8@myclaster-1.wxhqp81.mongodb.net/?retryWrites=true&w=majority`;
-
+console.log(uri);
 // mongoClient 
 const client = new MongoClient(uri, { 
 useNewUrlParser: true, 
@@ -45,7 +45,7 @@ async function run(){
     })
 
     // update details 
-    app.patch('/student/:id', async(req,res)=>{
+    app.put('/student/:id', async(req,res)=>{
       const id = req.params.id;
       const doc = req.body;
       console.log(doc);
